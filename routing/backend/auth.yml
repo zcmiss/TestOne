@@ -1,0 +1,27 @@
+###################
+### 认证相关接口 ###
+###################
+
+# 生成二维码
+auth/login:
+  needAuth: no
+  withPlatform: yes
+  method: post
+  handler: auth.login
+  params:
+    name:
+      label: 用户名
+      rules: must ^[a-zA-Z0-9]{0,16}$
+      default: ''
+    pswd:
+      label: 密码
+      rules: must ^[a-zA-Z0-9]{0,16}$
+      default: ''
+
+# 登出
+auth/logout:
+  needAuth: yes
+  withPlatform: yes
+  method: get
+  handler: auth.logout
+  params: []

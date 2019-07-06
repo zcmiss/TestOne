@@ -1,0 +1,8 @@
+# 配置示例
+appname: "qp"
+watch_exts:
+    - .yml
+envs:
+    - IS_DEVELOPER=YES
+    - IS_MOBILE_SERVICE=NO
+    - IS_COLLECT_TASK_SERVICE=NO
